@@ -10,7 +10,8 @@ const boardBackground = "darkgray";
 const snakeColor = "lightgreen";
 const snakeBorder = "black";
 const foodColor = "red";
-const unitSize = 10;
+const unitSize = 25;
+const initalSpeed = 75;
 
 let running = false;
 let xVelocity = unitSize;
@@ -18,7 +19,7 @@ let yVelocity = 0;
 let foodX;
 let foodY;
 let score = 0;
-let speed = 75; // inital speed
+let speed = initalSpeed;
 
 // the snake is an array of objects, each body part is an object
 let snake = [
@@ -53,6 +54,7 @@ function nextTick() {
       drawSnake();
       checkGameOver();
       nextTick();
+      console.log(speed);
     }, speed);
   } else {
     displayGameOver();
@@ -162,6 +164,7 @@ function displayGameOver() {
 }
 function resetGame() {
   score = 0;
+  speed = initalSpeed;
   xVelocity = unitSize;
   yVelocity = 0;
 

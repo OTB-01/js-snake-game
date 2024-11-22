@@ -10,6 +10,7 @@ body {
 #score-text {
   font-family: "Permanent Marker", cursive;
   font-size: 100px;
+  color: wheat;
 }
 #reset-btn {
   font-family: "Permanent Marker", cursive;
